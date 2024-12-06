@@ -137,6 +137,26 @@ public class Employee {
 	}
 	
 	
+	// VALIDATIONS
+	
+	// check if month is valid
+	private static boolean isCorrectMonth(int month) {
+		if (month >= 1 && month <= 12) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	// ensure employee has valid and legal work hours
+	private static boolean areCorrectHours(int hours) {
+		if (hours < 0 && hours > max_hours) {
+			throw new IllegalArgumentException("(i) Exceeded working hours limit.");
+		} else {
+			return true;
+		}
+	}
+	
 	
 	
 	
